@@ -27,6 +27,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "androidNavigationBar": {
+
+     "visible": false,
+     "barStyle": "light-content"
+   }
   }
 }

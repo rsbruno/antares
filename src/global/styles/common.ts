@@ -1,14 +1,24 @@
 import styled from "styled-components/native";
 
-export const Container = styled.View`
+//tipagem para uma View
+type View = {
+  background?: string;
+};
+
+//tipagem para um Text
+type Text = {
+  color?: string;
+  size?:number 
+};
+
+export const Container = styled.View<View>`
   flex: 1;
-  background-color: #fff;
-  align-items: center;
-  justify-content: center;
+  background-color: ${(props) =>
+    props.background ? props.background : "#fff"};
 `;
 
-export const Title = styled.Text`
-  color: #000;
+export const Title = styled.Text<Text>`
+  color: ${(props) => (props.color ? props.color : "#000")};
   text-align: center;
-  font-size: 16px;
+  font-size: ${(props) => (props.size ? props.size : 16)}px;
 `;
