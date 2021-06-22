@@ -16,7 +16,7 @@ type Text = {
 export const Container = styled.View<View>`
   flex: 1;
   background-color: ${(props) =>
-    props.background ? props.background : "#fff"};
+    props.background ? props.background : "transparent"};
 `;
 
 export const Title = styled.Text<Text>`
