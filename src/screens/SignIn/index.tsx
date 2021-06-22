@@ -3,7 +3,7 @@ import React from "react";
 
 import { BigButtonIcon } from "../../components/BigButtonIcon";
 
-import colors from "../../global/constants/colors";
+import * as colors from "../../global/constants/colors";
 import { Container, Title } from "../../global/styles/common";
 
 import { WrapperMain, Banner, Subitle, WrapperButton } from "./styles";
@@ -14,7 +14,7 @@ export function SignIn() {
       <Banner source={require("../../assets/illustration.png")} />
 
       <WrapperMain>
-        <Title color={colors.textLight} size={40}>
+        <Title color={colors.textlight} size={40}>
           Conecte-se {"\n"}e organize suas {"\n"}
           jogatinas
         </Title>

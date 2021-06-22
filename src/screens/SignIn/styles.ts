@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
-import colors from "../../global/constants/colors";
+import * as colors from "../../global/constants/colors";
 
 export const Banner  = styled.Image`
     width: 100%;
@@ -11,7 +11,7 @@ export const WrapperMain =  styled.View`
 `;
 
 export const Subitle =  styled.Text`
-    color: ${colors.textLight};
+    color: ${colors.textlight};
     text-align: center;
     font-size: 15px;
     margin-top: 16px;
