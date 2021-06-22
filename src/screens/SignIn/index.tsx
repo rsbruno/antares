@@ -32,8 +32,6 @@ export function SignIn() {
           />
         </WrapperButton>
       </WrapperMain>
-
-      <StatusBar style="light" translucent hidden />
     </Container>
   );
 }

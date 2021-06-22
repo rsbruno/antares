@@ -3,6 +3,7 @@ import { Entypo } from "@expo/vector-icons";
 
 import { Avatar } from "../../components/Avatar";
 import { ButtonIcon } from "../../components/ButtonIcon";
+import { CategorySelect } from "../../components/CategorySelect";
 
 import { Container } from "../../global/styles/common";
 import { Head, Hello, WrapperName, Welcome, Name, Subtitle } from "./styles";
@@ -27,6 +28,9 @@ export function Home() {
           <Entypo name="plus" size={24} color={textlight} />
         </ButtonIcon>
       </Head>
+      
+      <CategorySelect />
+    
     </Container>
   );
 }
