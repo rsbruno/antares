@@ -1,5 +1,6 @@
 import styled from "styled-components/native";
 import * as colors from "../../global/constants/colors";
+import { text400 } from "../../global/constants/fonts";
 
 export const Banner  = styled.Image`
     width: 100%;
@@ -15,6 +16,7 @@ export const Subitle =  styled.Text`
     text-align: center;
     font-size: 15px;
     margin-top: 16px;
+    font-family: ${text400};
 `;
 
 export const WrapperButton =  styled.View`

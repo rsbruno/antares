@@ -4,17 +4,18 @@ import React from "react";
 import { BigButtonIcon } from "../../components/BigButtonIcon";
 
 import * as colors from "../../global/constants/colors";
+import { title700 } from "../../global/constants/fonts";
 import { Container, Title } from "../../global/styles/common";
 
 import { WrapperMain, Banner, Subitle, WrapperButton } from "./styles";
 
 export function SignIn() {
   return (
-    <Container background={colors.primaryApp}>
+    <Container background={"transparent"}>
       <Banner source={require("../../assets/illustration.png")} />
 
       <WrapperMain>
-        <Title color={colors.textlight} size={40}>
+        <Title color={colors.textlight} size={40} font={title700} lineheight={40}>
           Conecte-se {"\n"}e organize suas {"\n"}
           jogatinas
         </Title>

@@ -1,9 +1,11 @@
 import styled from "styled-components/native";
 import * as colors from "../../global/constants/colors";
+import { text500 } from "../../global/constants/fonts";
 
 export const BigButton = styled.TouchableOpacity`
     height: 54px;
     background: ${colors.primary};
+    border-radius: 8px;
 
     flex-direction: row;
     align-items: center;
@@ -26,4 +28,5 @@ export const Label = styled.Text`
     text-align: center;
     color: ${colors.textlight};
     font-size: 15px;
+    font-family: ${text500};
 `;

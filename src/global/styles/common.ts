@@ -8,7 +8,9 @@ type View = {
 //tipagem para um Text
 type Text = {
   color?: string;
-  size?:number 
+  size?: number;
+  font?: string;
+  lineheight?:number;
 };
 
 export const Container = styled.View<View>`
@@ -21,4 +23,6 @@ export const Title = styled.Text<Text>`
   color: ${(props) => (props.color ? props.color : "#000")};
   text-align: center;
   font-size: ${(props) => (props.size ? props.size : 16)}px;
+  font-family: ${(props) => (props.font ? props.font : "sans")};
+  line-height: ${(props) => (props.lineheight ? props.lineheight : 0)}px;
 `;
