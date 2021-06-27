@@ -11,7 +11,7 @@ export function Avatar() {
     <Wrapper>
       <LinearGradient colors={[secondary40, secondary30]}>
         <Content>
-            <AvatarImg source={{ uri: "https://github.com/rsbruno.png" }} />
+            <AvatarImg source={{ uri: "https://lh3.googleusercontent.com/ogw/ADea4I5QZtetOOBbAulTlXbaJ_5--n7ovn_2CrwNHRqSAw=s83-c-mo" }} />
         </Content>
       </LinearGradient>
     </Wrapper>

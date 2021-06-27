@@ -7,5 +7,5 @@ export const Categories = [
     {id:1,title:"Ranqueada",icon:RankedSVG},
     {id:2,title:"Duelo 1X1",icon:DuelSVG},
     {id:3,title:"Diversão",icon:FunSVG},
-    {id:4,title:"treino",icon:TrainingSVG},
+    {id:4,title:"Treino",icon:TrainingSVG},
 ]
