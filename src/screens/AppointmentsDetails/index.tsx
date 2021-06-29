@@ -1,11 +1,25 @@
-import React from "react"
+import React from "react";
 
-import {Container} from "./styles"
+import { Container,ActionButton } from "./styles";
 
-export function AppointmentsDetails(){
-    return(
-        <Container>
+import { Header } from "../../components/Header";
 
-        </Container>
-    )
+import { Fontisto } from "@expo/vector-icons";
+import { primary, secondary30, textlight } from "../../global/constants/colors";
+
+export function AppointmentsDetails() {
+  return (
+    <Container>
+      <Header
+        title="Detalhes"
+        action={
+          <ActionButton 
+            rippleColor={secondary30}
+          >
+            <Fontisto name="share" color={primary} size={18} />
+          </ActionButton>
+        }
+      />
+    </Container>
+  );
 }
