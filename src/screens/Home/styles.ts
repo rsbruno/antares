@@ -35,11 +35,3 @@ export const Subtitle = styled.Text`
   font-size: 13px;
   color: ${colors.highlight};
 `;
-
-export const DivisorLine = styled.View`
-  width: 75%;
-  height: 2px;
-  background: ${colors.secondary40};
-  margin-top: 12px;
-  align-self: flex-end;
-`;

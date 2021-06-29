@@ -1,4 +1,4 @@
-import { RectButton } from "react-native-gesture-handler";
+import { BorderlessButton } from "react-native-gesture-handler";
 import { getStatusBarHeight } from "react-native-status-bar-height";
 import styled from "styled-components/native";
 import * as colors from "../../global/constants/colors";
@@ -12,7 +12,7 @@ export const Content = styled.View`
   flex-direction: row;
 `;
 
-export const WrapperBack = styled(RectButton)`
+export const WrapperBack = styled(BorderlessButton)`
     position: absolute;
     left: 15px;
     padding: 10px;

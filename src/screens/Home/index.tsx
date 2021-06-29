@@ -2,6 +2,7 @@ import React from "react";
 import { FlatList } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 
+import { DivisorLine } from "../../components/ListDivisor/styles";
 import { CategorySelect } from "../../components/CategorySelect";
 import { Appointment } from "../../components/Appointment";
 import { ButtonIcon } from "../../components/ButtonIcon";
@@ -9,7 +10,7 @@ import { ListName } from "../../components/ListName";
 import { Avatar } from "../../components/Avatar";
 
 import { Container } from "../../global/styles/common";
-import { Head, Hello, WrapperName, Welcome, Name, Subtitle,DivisorLine } from "./styles";
+import { Head, Hello, WrapperName, Welcome, Name, Subtitle} from "./styles";
 import { textlight } from "../../global/constants/colors";
 import { ListEmpty } from "../../components/ListEmpty";
 

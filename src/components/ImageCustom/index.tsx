@@ -6,7 +6,11 @@ import { secondary50, secondary60 } from "../../global/constants/colors";
 
 import { View } from "react-native";
 
-export function ImageCustom() {
+type ImageCustomProps = {
+  source?: string;
+};
+
+export function ImageCustom({ source }: ImageCustomProps) {
   return (
     <Container>
       <LinearGradient colors={[secondary50, secondary60]}>
@@ -14,7 +18,9 @@ export function ImageCustom() {
           <WrapperImage>
             <Image
               source={{
-                uri: "https://pbs.twimg.com/media/EEtSbyFXYAA6yMg.jpg",
+                uri: source
+                  ? source
+                  : "https://pbs.twimg.com/media/EEtSbyFXYAA6yMg.jpg",
               }}
             />
           </WrapperImage>

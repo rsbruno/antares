@@ -12,6 +12,7 @@ import {
   textlight,
 } from "../../global/constants/colors";
 import { LinearGradient } from "expo-linear-gradient";
+import { useNavigation } from "@react-navigation/native";
 
 type Props = {
   title: string;
@@ -19,10 +20,17 @@ type Props = {
 };
 
 export function Header({ title, action }: Props) {
+
+  const navigation = useNavigation();
+
+  const handleGoBack = () =>{
+    navigation.goBack();
+  }
+
   return (
     <LinearGradient colors={[secondary40, secondary70]}>
       <Content>
-        <WrapperBack rippleColor={secondary30}>
+        <WrapperBack rippleColor={secondary30} onPress={handleGoBack}>
           <Feather name="arrow-left" color={textlight} size={24} />
         </WrapperBack>
         <Title>{title}</Title>
