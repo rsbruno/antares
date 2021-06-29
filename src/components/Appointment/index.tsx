@@ -5,7 +5,7 @@ import CalendarSVG from "../../assets/calendar.svg";
 import PlayerSVG from "../../assets/player.svg";
 
 import {
-  Container,
+  Button,
   Name,
   TopLine,
   Category,
@@ -17,7 +17,8 @@ import {
   TypePlayer,
 } from "./styles";
 
-import { primary, on } from "../../global/constants/colors";
+import { primary, on, secondary30 } from "../../global/constants/colors";
+import { useNavigation } from "@react-navigation/native";
 
 type GuildProps = {
   id: string;
@@ -43,8 +44,14 @@ export function Appointment({ data }: Props) {
     return item.id == parseInt(data.category);
   });
 
+  const navigate = useNavigation();
+
+  const handleNavigation = () => {
+    navigate.navigate("AppointmentsDetails");
+  }
+
   return (
-    <Container>
+    <Button onPress={handleNavigation} rippleColor={secondary30}>
       <ImageCustom />
       <AppointmentInfo>
         <TopLine>
@@ -66,6 +73,6 @@ export function Appointment({ data }: Props) {
           </Owner>
         </Info>
       </AppointmentInfo>
-    </Container>
+    </Button>
   );
 }

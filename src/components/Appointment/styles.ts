@@ -1,12 +1,13 @@
 import styled from "styled-components/native";
 import * as colors from "../../global/constants/colors";
 import { text400, text500, title700 } from "../../global/constants/fonts";
+import {RectButton} from 'react-native-gesture-handler'
 
 type TypePlayerProps = {
   color?: string;
 };
 
-export const Container = styled.View`
+export const Button = styled(RectButton)`
   padding: 0 16px;
   margin-top: 20px;
   flex-direction: row;
