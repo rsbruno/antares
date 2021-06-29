@@ -1,24 +1,26 @@
-import { Fontisto } from "@expo/vector-icons";
-import { FlatList } from "react-native";
 import React from "react";
 
+import { Container } from "../../global/styles/common";
+import { Fontisto } from "@expo/vector-icons";
+import { FlatList } from "react-native";
+
 import {
-  Container,
   ActionButton,
   Banner,
   Title,
   Description,
   WrapperText,
-  ListUser,
+  Footer,
 } from "./styles";
 
-import { primary, secondary30, textlight } from "../../global/constants/colors";
+import { primary, secondary30 } from "../../global/constants/colors";
 import BannerIMG from "../../assets/banner.png";
 
+import { DivisorLine } from "../../components/ListDivisor/styles";
+import { BigButtonIcon } from "../../components/BigButtonIcon";
 import { ListName } from "../../components/ListName";
 import { Header } from "../../components/Header";
 import { Player } from "../../components/Player";
-import { DivisorLine } from "../../components/ListDivisor/styles";
 
 export function AppointmentsDetails() {
   const users = [
@@ -26,13 +28,13 @@ export function AppointmentsDetails() {
       id: "1",
       name: "Bruno",
       avatar: "http://github.com/rsbruno.png",
-      status: 1
+      status: 1,
     },
     {
       id: "2",
       name: "Diego",
       avatar: "http://github.com/diego3g.png",
-      status: 2
+      status: 2,
     },
   ];
 
@@ -64,8 +66,16 @@ export function AppointmentsDetails() {
         renderItem={({ item }) => {
           return <Player data={item} />;
         }}
-        ItemSeparatorComponent={()=><DivisorLine/>}
+        ItemSeparatorComponent={() => <DivisorLine />}
+        contentContainerStyle={{}}
       />
+
+      <Footer>
+        <BigButtonIcon
+          icon={require("../../assets/discord.png")}
+          label="Entrar na partida"
+        />
+      </Footer>
     </Container>
   );
 }

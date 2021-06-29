@@ -3,9 +3,6 @@ import styled from "styled-components/native"
 import * as colors from "../../global/constants/colors"
 import { text400, title700 } from "../../global/constants/fonts";
 
-export const Container = styled.View`
-    
-`;
 export const ActionButton = styled(RectButton)`
     padding: 14px;
     border-radius: 8px;
@@ -35,6 +32,8 @@ export const Description = styled.Text`
     font-size: 13px;
 `;
 
-export const ListUser = styled.FlatList`
-
+export const Footer = styled.View`
+    bottom: 22px;
+    padding:  0 18px;
+    width: 100%;
 `;
