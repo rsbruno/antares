@@ -8,12 +8,16 @@ import { View } from "react-native";
 
 type ImageCustomProps = {
   source?: string;
+  noBorder?:boolean; //Por padrão é falso, pois é uma negação de quero borda
 };
 
-export function ImageCustom({ source }: ImageCustomProps) {
+export function ImageCustom({ source, noBorder = false }: ImageCustomProps) {
+
+  const transparent = ["transparent","transparent"]
+
   return (
     <Container>
-      <LinearGradient colors={[secondary50, secondary60]}>
+      <LinearGradient colors={noBorder?transparent:[secondary50,secondary60]}>
         <Content>
           <WrapperImage>
             <Image

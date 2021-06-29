@@ -52,7 +52,7 @@ export function Appointment({ data }: Props) {
 
   return (
     <Button onPress={handleNavigation} rippleColor={secondary30}>
-      <ImageCustom />
+      <ImageCustom/>
       <AppointmentInfo>
         <TopLine>
           <Name>{data.guild.name}</Name>
