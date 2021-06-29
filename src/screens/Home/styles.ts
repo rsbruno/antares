@@ -19,6 +19,11 @@ export const Hello = styled.View`
 export const WrapperName = styled.View`
   flex-direction: row;
 `;
+
+export const ContentCategory = styled.View`
+  margin-top: 37px;
+`;
+
 export const Welcome = styled.Text`
   font-family: ${title500};
   font-size: 24px;

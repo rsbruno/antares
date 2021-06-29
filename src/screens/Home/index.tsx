@@ -10,9 +10,10 @@ import { ListName } from "../../components/ListName";
 import { Avatar } from "../../components/Avatar";
 
 import { Container } from "../../global/styles/common";
-import { Head, Hello, WrapperName, Welcome, Name, Subtitle} from "./styles";
+import { Head, Hello, WrapperName, Welcome, Name, Subtitle,ContentCategory } from "./styles";
 import { textlight } from "../../global/constants/colors";
 import { ListEmpty } from "../../components/ListEmpty";
+import { useNavigation } from "@react-navigation/native";
 
 const appointments = [
   {
@@ -57,6 +58,12 @@ const appointments = [
 ];
 
 export function Home() {
+  const navigation = useNavigation();
+
+  const handleAppointmentCreate = () => {
+    navigation.navigate("AppointmentsCreate");
+  };
+
   return (
     <Container>
       <Head>
@@ -71,25 +78,31 @@ export function Home() {
           <Subtitle>Hoje é dia de vitória</Subtitle>
         </Hello>
 
-        <ButtonIcon>
+        <ButtonIcon onPress={handleAppointmentCreate}>
           <Entypo name="plus" size={24} color={textlight} />
         </ButtonIcon>
       </Head>
 
-      <CategorySelect />
+      <ContentCategory>
+        <CategorySelect />
+      </ContentCategory>
 
-      <ListName title="Partidas agendadas" subtitle={`Total ${appointments.length}`} />
+      <ListName
+        title="Partidas agendadas"
+        subtitle={`Total ${appointments.length}`}
+      />
 
       <FlatList
         data={appointments}
         keyExtractor={(item) => item.id}
-        renderItem={({item}) => {
-          return <Appointment data={item}/>
+        renderItem={({ item }) => {
+          return <Appointment data={item} />;
         }}
-        ItemSeparatorComponent={()=> <DivisorLine />}
-        ListEmptyComponent={()=><ListEmpty label="Nenhum compromisso a exibir"/>}
+        ItemSeparatorComponent={() => <DivisorLine />}
+        ListEmptyComponent={() => (
+          <ListEmpty label="Nenhum compromisso a exibir" />
+        )}
       />
-
     </Container>
   );
 }

@@ -2,10 +2,12 @@ import React, { ReactNode } from "react";
 
 import { WrapperButton } from "./styles";
 
-type Button = {
+import {RectButtonProps} from "react-native-gesture-handler"
+
+type Button = RectButtonProps & {
   children: ReactNode;
 };
 
-export function ButtonIcon({children}:Button) {
-  return <WrapperButton>{children}</WrapperButton>;
+export function ButtonIcon({children, ...rest}:Button) {
+  return <WrapperButton {...rest}>{children}</WrapperButton>;
 }
