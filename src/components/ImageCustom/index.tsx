@@ -11,7 +11,7 @@ type ImageCustomProps = {
   noBorder?:boolean; //Por padrão é falso, pois é uma negação de quero borda
 };
 
-export function ImageCustom({ source, noBorder = false }: ImageCustomProps) {
+export function ImageCustom({ source, noBorder = false}: ImageCustomProps) {
 
   const transparent = ["transparent","transparent"]
 
