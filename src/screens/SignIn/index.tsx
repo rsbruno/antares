@@ -6,10 +6,17 @@ import { BigButtonIcon } from "../../components/BigButtonIcon";
 import * as colors from "../../global/constants/colors";
 import { title700 } from "../../global/constants/fonts";
 import { Container, Title } from "../../global/styles/common";
+import { useAuth } from "../../hooks/auth";
 
 import { WrapperMain, Banner, Subitle, WrapperButton } from "./styles";
 
 export function SignIn() {
+
+  const { user } = useAuth();
+
+  console.log(user);
+
+
   return (
     <Container background={"transparent"}>
       <Banner source={require("../../assets/illustration.png")} />

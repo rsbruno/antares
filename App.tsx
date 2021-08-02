@@ -12,6 +12,7 @@ import * as colors from './src/global/constants/colors'
 
 import { LinearGradient } from "./src/components/LinearGradient";
 import { Routes } from "./src/routes";
+import { AuthProvider } from "./src/hooks/auth";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -26,11 +27,13 @@ export default function App() {
   }
 
   return (
-   <>
-    <LinearGradient colors={[colors.secondary80, colors.secondary100]}>
-      <Routes />
-    </LinearGradient>
-    <StatusBar style="light" translucent/>
-   </>
+    <>
+      <LinearGradient colors={[colors.secondary80, colors.secondary100]}>
+        <AuthProvider>
+          <Routes />
+        </AuthProvider>
+      </LinearGradient>
+      <StatusBar style="light" translucent />
+    </>
   );
 }
