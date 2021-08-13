@@ -32,8 +32,8 @@ export function AppointmentsDetails() {
     },
     {
       id: "2",
-      name: "Diego",
-      avatar: "http://github.com/diego3g.png",
+      name: "Bruno R Santos",
+      avatar: "http://github.com/rsbruno.png",
       status: 2,
     },
   ];
